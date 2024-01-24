@@ -1,0 +1,30 @@
+ DATA STRUCTURES
+
+
+UNIT -5
+
+
+----------------------------------------------------------------------------------
+
+Balanced Trees: AVL Trees
+
+Tutorialspoint      https://www.youtube.com/watch?v=-ODwekYuDkM
+Abdul Bari   https://www.youtube.com/watch?v=jDM6_TnYIqE
+----------------------------------------------------------------------------------
+
+ Splay trees
+
+Jenny's Lectures CS IT      https://www.youtube.com/watch?v=qMmqOHr75b8
+Jenny's Lectures CS IT   https://www.youtube.com/watch?v=1HeIZNP3w4A
+----------------------------------------------------------------------------------
+
+ Red- Black Trees – Definitions
+
+Jenny's Lectures CS IT      https://www.youtube.com/watch?v=3RQtq7PDHog
+THE GATEHUB   https://www.youtube.com/watch?v=l9WtESmtrcM
+----------------------------------------------------------------------------------
+
+ Rotation and otherbasic operations.
+
+Jenny's Lectures CS IT      https://www.youtube.com/watch?v=YWqla0UX-38
+Sundeep Saradhi Kanthety   https://www.youtube.com/watch?v=moTfpnEuhlg

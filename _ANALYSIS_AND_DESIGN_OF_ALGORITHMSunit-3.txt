@@ -1,0 +1,42 @@
+ ANALYSIS AND DESIGN OF ALGORITHMS
+
+
+UNIT -3
+
+
+----------------------------------------------------------------------------------
+
+Decrease and conquer: Depth First Search (DFS)
+
+ThinkAloudAcademy      https://www.youtube.com/watch?v=8ntjOJYkBqQ
+Gate Smashers   https://www.youtube.com/watch?v=N2P7w22tN9c
+----------------------------------------------------------------------------------
+
+ Breadth First Search (BFS)
+
+Gate Smashers      https://www.youtube.com/watch?v=N2P7w22tN9c
+Jenny's Lectures CS IT   https://www.youtube.com/watch?v=vf-cxgUXcMk
+----------------------------------------------------------------------------------
+
+ Applicationsof DFS and BFS
+
+Go GATE IIT      https://www.youtube.com/watch?v=iaBEKo5sM7w
+Gate Smashers   https://www.youtube.com/watch?v=f8luGFRtshY
+----------------------------------------------------------------------------------
+
+ Topological Sorting
+
+Gate Smashers      https://www.youtube.com/watch?v=3tkcfvCNtM8
+Jenny's Lectures CS IT   https://www.youtube.com/watch?v=dis_c84ejhQ
+----------------------------------------------------------------------------------
+
+ Algorithms for Generating permutationsSpace and Time Trade-offs: Horspool Algorithm
+
+Scholarly Things      https://www.youtube.com/watch?v=0-FZyh46zwA
+Dr H S Guru Prasad   https://www.youtube.com/watch?v=W4h6555g5qo
+----------------------------------------------------------------------------------
+
+ Hashing
+
+Gate Smashers      https://www.youtube.com/watch?v=W5q0xgxmRd8
+Sami Aqeel   https://www.youtube.com/watch?v=OnxIqnsR_Q0

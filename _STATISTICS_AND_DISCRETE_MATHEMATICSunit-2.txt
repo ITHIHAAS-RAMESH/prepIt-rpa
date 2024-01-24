@@ -1,0 +1,48 @@
+STATISTICS AND DISCRETE MATHEMATICS
+
+
+UNIT -2
+
+
+----------------------------------------------------------------------------------
+
+COMBINATORICS:Introduction
+
+Easy Engineering Classes      https://www.youtube.com/watch?v=lscOTEPc5xg
+Mathemaniac   https://www.youtube.com/watch?v=ied31kWht7Y
+----------------------------------------------------------------------------------
+
+ Binomial and multinomial theorems
+
+Dr. Madhura K      https://www.youtube.com/watch?v=4FlSfNRjFz4
+BHANNAT MATHS   https://www.youtube.com/watch?v=l6VFXSl3Ll4
+----------------------------------------------------------------------------------
+
+ Catalan numbers
+
+TrevTutor      https://www.youtube.com/watch?v=GlI17WaMrtw
+NPTEL-NOC IITM   https://www.youtube.com/watch?v=6Z_eengdMVE
+----------------------------------------------------------------------------------
+
+ the principle ofinclusion andexclusion
+
+TrevTutor      https://www.youtube.com/watch?v=GS7dIWA6Hpo
+Easy Engineering Classes   https://www.youtube.com/watch?v=bohSynua_Jc
+----------------------------------------------------------------------------------
+
+ Derangements
+
+TrevTutor      https://www.youtube.com/watch?v=BOFWLhH0Igo
+Dr. Madhura K   https://www.youtube.com/watch?v=4q8xsfz6UDE
+----------------------------------------------------------------------------------
+
+ Rook Polynomials
+
+Dr. Madhura K      https://www.youtube.com/watch?v=iHC1ZdLdKjw
+NPTEL-NOC IITM   https://www.youtube.com/watch?v=2CpODfjud3o
+----------------------------------------------------------------------------------
+
+ Generating functions.
+
+Ekeeda      https://www.youtube.com/watch?v=Y7HIdL_LmhA
+YY Ahn   https://www.youtube.com/watch?v=YB7qnuo-GRY
