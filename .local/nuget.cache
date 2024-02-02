@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "TDb19Li28bib0RsEgEfZvBerMiTEXYLCZcvtg0uw9a0KOBIDDWvR34Jv5Bjrn3RTsllW860JaulM2at70IpQgQ==",
+  "dgSpecHash": "81bEBpsUFj+Mx5CIv3UJfEyviwsnQfb70kjm6SF+lFZHzEsmDdVI+QiHGAIyw49HmJcP1ZB3+FOt6I/cABj40A==",
   "success": true,
   "projectFilePath": "C:\\Users\\ithih\\OneDrive\\Documents\\UiPath\\project\\.local\\",
   "expectedPackageFiles": [
@@ -280,10 +280,10 @@
     "C:\\Users\\ithih\\.nuget\\packages\\system.windows.extensions\\5.0.0\\system.windows.extensions.5.0.0.nupkg.sha512",
     "C:\\Users\\ithih\\.nuget\\packages\\system.xml.readerwriter\\4.3.0\\system.xml.readerwriter.4.3.0.nupkg.sha512",
     "C:\\Users\\ithih\\.nuget\\packages\\system.xml.xdocument\\4.3.0\\system.xml.xdocument.4.3.0.nupkg.sha512",
-    "C:\\Users\\ithih\\.nuget\\packages\\uipath\\23.10.71.64399\\uipath.23.10.71.64399.nupkg.sha512",
+    "C:\\Users\\ithih\\.nuget\\packages\\uipath\\23.12.73.64808-preview\\uipath.23.12.73.64808-preview.nupkg.sha512",
     "C:\\Users\\ithih\\.nuget\\packages\\uipath.activities.runtimegovernance\\1.1.6\\uipath.activities.runtimegovernance.1.1.6.nupkg.sha512",
     "C:\\Users\\ithih\\.nuget\\packages\\uipath.baf.infrastructure\\2.0.2\\uipath.baf.infrastructure.2.0.2.nupkg.sha512",
-    "C:\\Users\\ithih\\.nuget\\packages\\uipath.codedworkflows\\23.10.0\\uipath.codedworkflows.23.10.0.nupkg.sha512",
+    "C:\\Users\\ithih\\.nuget\\packages\\uipath.codedworkflows\\23.10.2\\uipath.codedworkflows.23.10.2.nupkg.sha512",
     "C:\\Users\\ithih\\.nuget\\packages\\uipath.connectionclient\\1.4.8\\uipath.connectionclient.1.4.8.nupkg.sha512",
     "C:\\Users\\ithih\\.nuget\\packages\\uipath.documentprocessing.contracts\\1.24.1-preview\\uipath.documentprocessing.contracts.1.24.1-preview.nupkg.sha512",
     "C:\\Users\\ithih\\.nuget\\packages\\uipath.documentunderstanding.digitizer\\4.0.0\\uipath.documentunderstanding.digitizer.4.0.0.nupkg.sha512",
@@ -293,7 +293,7 @@
     "C:\\Users\\ithih\\.nuget\\packages\\uipath.integrationservice.activities\\1.1.0\\uipath.integrationservice.activities.1.1.0.nupkg.sha512",
     "C:\\Users\\ithih\\.nuget\\packages\\uipath.integrationservice.infrastructure\\2.0.4\\uipath.integrationservice.infrastructure.2.0.4.nupkg.sha512",
     "C:\\Users\\ithih\\.nuget\\packages\\uipath.mail.activities\\1.21.1\\uipath.mail.activities.1.21.1.nupkg.sha512",
-    "C:\\Users\\ithih\\.nuget\\packages\\uipath.ocr.activities\\3.17.1\\uipath.ocr.activities.3.17.1.nupkg.sha512",
+    "C:\\Users\\ithih\\.nuget\\packages\\uipath.ocr.activities\\3.18.0-preview\\uipath.ocr.activities.3.18.0-preview.nupkg.sha512",
     "C:\\Users\\ithih\\.nuget\\packages\\uipath.ocr.contracts\\2.16.0\\uipath.ocr.contracts.2.16.0.nupkg.sha512",
     "C:\\Users\\ithih\\.nuget\\packages\\uipath.openai.integrationservice.activities\\5.0.1-preview\\uipath.openai.integrationservice.activities.5.0.1-preview.nupkg.sha512",
     "C:\\Users\\ithih\\.nuget\\packages\\uipath.pdf.activities\\3.17.0-preview\\uipath.pdf.activities.3.17.0-preview.nupkg.sha512",
@@ -303,9 +303,9 @@
     "C:\\Users\\ithih\\.nuget\\packages\\uipath.system.activities.runtime.windows\\23.10.3\\uipath.system.activities.runtime.windows.23.10.3.nupkg.sha512",
     "C:\\Users\\ithih\\.nuget\\packages\\uipath.telemetry.client\\1.7.1\\uipath.telemetry.client.1.7.1.nupkg.sha512",
     "C:\\Users\\ithih\\.nuget\\packages\\uipath.testing.activities\\23.10.0\\uipath.testing.activities.23.10.0.nupkg.sha512",
-    "C:\\Users\\ithih\\.nuget\\packages\\uipath.uiautomation.activities\\23.10.8\\uipath.uiautomation.activities.23.10.8.nupkg.sha512",
-    "C:\\Users\\ithih\\.nuget\\packages\\uipath.uiautomation.activities.runtime\\23.10.8\\uipath.uiautomation.activities.runtime.23.10.8.nupkg.sha512",
-    "C:\\Users\\ithih\\.nuget\\packages\\uipath.vision\\3.11.1\\uipath.vision.3.11.1.nupkg.sha512",
+    "C:\\Users\\ithih\\.nuget\\packages\\uipath.uiautomation.activities\\23.12.1-preview\\uipath.uiautomation.activities.23.12.1-preview.nupkg.sha512",
+    "C:\\Users\\ithih\\.nuget\\packages\\uipath.uiautomation.activities.runtime\\23.12.1-preview\\uipath.uiautomation.activities.runtime.23.12.1-preview.nupkg.sha512",
+    "C:\\Users\\ithih\\.nuget\\packages\\uipath.vision\\3.12.0\\uipath.vision.3.12.0.nupkg.sha512",
     "C:\\Users\\ithih\\.nuget\\packages\\uipath.webapi.activities\\1.13.3\\uipath.webapi.activities.1.13.3.nupkg.sha512"
   ],
   "logs": [

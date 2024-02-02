@@ -12,6 +12,10 @@
       "Path": "Main.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
+        "status&Sequence_54",
+        "email&Sequence_54",
+        "outputFolder&Sequence_51",
+        "chatAns&Sequence_46",
         "email&Sequence_42",
         "outputFolder&Sequence_3",
         "courseName&Flowchart_1",

@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Main" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="715.2,712" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:av="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:str="clr-namespace:System.Text.RegularExpressions;assembly=System.Text.RegularExpressions" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:uoic="clr-namespace:UiPath.OpenAI.IntegrationService.Client;assembly=UiPath.OpenAI.IntegrationService" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="715.2,712" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:av="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:c="clr-namespace:ChatGPT_Activities;assembly=ChatGPT.Activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:str="clr-namespace:System.Text.RegularExpressions;assembly=System.Text.RegularExpressions" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
       <x:String>System.Activities</x:String>
@@ -80,6 +80,10 @@
       <x:String>UiPath.BAF.Infrastructure.Contracts</x:String>
       <x:String>UiPath.OpenAI.IntegrationService.Client</x:String>
       <x:String>UiPath.OpenAI.IntegrationService.Client</x:String>
+      <x:String>UiPath.CV</x:String>
+      <x:String>UiPath.Shared.ObjectLibrary</x:String>
+      <x:String>UiPath.CV.Activities</x:String>
+      <x:String>UiPath.CV.Activities.Interfaces</x:String>
     </sco:Collection>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -167,9 +171,12 @@
       <AssemblyReference>UiPath.BAF.Infrastructure</AssemblyReference>
       <AssemblyReference>UiPath.OpenAI.IntegrationService.Activities</AssemblyReference>
       <AssemblyReference>UiPath.OpenAI.IntegrationService</AssemblyReference>
+      <AssemblyReference>UiPath.CV</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.CV.Activities</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Flowchart sap:VirtualizedContainerService.HintSize="683.2,647.2" sap2010:WorkflowViewState.IdRef="Flowchart_1">
+  <Flowchart sap:VirtualizedContainerService.HintSize="705.6,647.2" sap2010:WorkflowViewState.IdRef="Flowchart_1">
     <Flowchart.Variables>
       <Variable x:TypeArguments="scg:IEnumerable(str:Match)" Name="individual" />
       <Variable x:TypeArguments="scg:IEnumerable(str:Match)" Name="courseName" />
@@ -185,13 +192,13 @@
         <av:Size x:Key="ShapeSize">60,75.2</av:Size>
         <av:PointCollection x:Key="ConnectorLocation">300,77.6 300,127.6</av:PointCollection>
         <x:Double x:Key="Height">610.4000000000001</x:Double>
-        <x:Double x:Key="Width">650</x:Double>
+        <x:Double x:Key="Width">672</x:Double>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
     <Flowchart.StartNode>
-      <x:Reference>__ReferenceID3</x:Reference>
+      <x:Reference>__ReferenceID4</x:Reference>
     </Flowchart.StartNode>
-    <FlowStep x:Name="__ReferenceID3">
+    <FlowStep x:Name="__ReferenceID4">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <av:Point x:Key="ShapeLocation">200,127.6</av:Point>
@@ -306,7 +313,7 @@
                             <Delay Duration="00:00:02" sap:VirtualizedContainerService.HintSize="387.2,90.4" sap2010:WorkflowViewState.IdRef="Delay_19" />
                             <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'INPUT search'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="387.2,218.4" sap2010:WorkflowViewState.IdRef="NTypeInto_1" ScopeIdentifier="81bc509e-1a07-43f4-8e24-b2d0049e8587" Text="[currentItem.ToString.Replace(vbLf, &quot;&quot;).Replace(vbCr, &quot;&quot;) + &quot; &quot; + courseName(0).Value.Replace(vbLf,&quot;&quot;).Replace(vbCr,&quot;&quot;)]" Version="V3">
                               <uix:NTypeInto.Target>
-                                <uix:TargetAnchorable BrowserURL="https://www.youtube.com/" CvElementArea="537, 104, 673, 54" CvType="InputBox" DesignTimeRectangle="558, 115, 644, 33" DesignTimeScaleFactor="1.25" ElementType="InputBox" FriendlyName="'INPUT search'" FullSelectorArgument="&lt;webctrl id='search' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='search' tag='INPUT' type='text' class='' aaname='' /&gt;" Guid="eba0badf-2ba3-404e-b58d-a23f84b3ba06" InformativeScreenshot="bb109541b7ad33ebf012031be11b766d.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='YouTube' /&gt;" SearchSteps="FuzzySelector, CV" Version="V2" Visibility="Interactive" />
+                                <uix:TargetAnchorable BrowserURL="https://www.youtube.com/" CvElementArea="537, 104, 673, 54" CvType="InputBox" DesignTimeRectangle="558, 115, 644, 33" DesignTimeScaleFactor="1.25" ElementType="InputBox" FullSelectorArgument="&lt;webctrl id='search' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='search' tag='INPUT' type='text' class='' aaname='' /&gt;" Guid="eba0badf-2ba3-404e-b58d-a23f84b3ba06" InformativeScreenshot="bb109541b7ad33ebf012031be11b766d.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='YouTube' /&gt;" SearchSteps="FuzzySelector, CV" Version="V2" Visibility="Interactive" />
                               </uix:NTypeInto.Target>
                             </uix:NTypeInto>
                             <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'BUTTON  search-icon-leg...'" sap:VirtualizedContainerService.HintSize="387.2,107.2" sap2010:WorkflowViewState.IdRef="Click_30" KeyModifiers="None" MouseButton="BTN_LEFT">
@@ -331,7 +338,7 @@
                                 </ui:Target>
                               </ui:Click.Target>
                             </ui:Click>
-                            <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'YT-CHIP-CLOUD-CHIP-REND...'" sap:VirtualizedContainerService.HintSize="387.2,107.2" sap2010:WorkflowViewState.IdRef="Click_31" KeyModifiers="None" MouseButton="BTN_LEFT">
+                            <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" ContinueOnError="True" DisplayName="Click 'YT-CHIP-CLOUD-CHIP-REND...'" sap:VirtualizedContainerService.HintSize="387.2,107.2" sap2010:WorkflowViewState.IdRef="Click_31" KeyModifiers="None" MouseButton="BTN_LEFT">
                               <ui:Click.CursorPosition>
                                 <ui:CursorPosition Position="Center">
                                   <ui:CursorPosition.OffsetX>
@@ -374,7 +381,7 @@
                             </ui:Click>
                             <uix:NGetText DisplayName="Get Text 'Reducible'" sap:VirtualizedContainerService.HintSize="387.2,157.6" sap2010:WorkflowViewState.IdRef="NGetText_2" ScopeIdentifier="81bc509e-1a07-43f4-8e24-b2d0049e8587" TextString="[channelName1]" Version="V3">
                               <uix:NGetText.Target>
-                                <uix:TargetAnchorable BrowserURL="https://www.youtube.com/results?search_query=graph+theory" CvTextArea="907, 380, 67, 15" CvType="AnyWordGroup" DesignTimeRectangle="909, 377, 65, 23" DesignTimeScaleFactor="1.25" ElementType="Text" FriendlyName="'Reducible'" FullSelectorArgument="&lt;webctrl aaname='Reducible' css-selector='body&amp;gt;ytd-app&amp;gt;div&amp;gt;ytd-page-manager&amp;gt;ytd-search&amp;gt;div&amp;gt;ytd-two-column-search-results-renderer&amp;gt;div&amp;gt;ytd-section-list-renderer&amp;gt;div&amp;gt;ytd-item-section-renderer&amp;gt;div&amp;gt;ytd-video-renderer&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;ytd-channel-name&amp;gt;div&amp;gt;div&amp;gt;yt-formatted-string&amp;gt;a' parentid='text' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl type='' parentid='text' tag='A' class='yt-simple-endpoint style-scope yt-formatted-string' /&gt;" Guid="7014929b-91fe-446a-86bb-cadf498e6458" InformativeScreenshot="20c212a137e1febce9b513509ae86457.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='graph theory - YouTube' /&gt;" SearchSteps="FuzzySelector, CV" Version="V2" Visibility="Interactive" />
+                                <uix:TargetAnchorable BrowserURL="https://www.youtube.com/results?search_query=graph+theory" CvTextArea="907, 380, 67, 15" CvType="AnyWordGroup" DesignTimeRectangle="909, 377, 65, 23" DesignTimeScaleFactor="1.25" ElementType="Text" FullSelectorArgument="&lt;webctrl aaname='Reducible' css-selector='body&amp;gt;ytd-app&amp;gt;div&amp;gt;ytd-page-manager&amp;gt;ytd-search&amp;gt;div&amp;gt;ytd-two-column-search-results-renderer&amp;gt;div&amp;gt;ytd-section-list-renderer&amp;gt;div&amp;gt;ytd-item-section-renderer&amp;gt;div&amp;gt;ytd-video-renderer&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;ytd-channel-name&amp;gt;div&amp;gt;div&amp;gt;yt-formatted-string&amp;gt;a' parentid='text' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl type='' parentid='text' tag='A' class='yt-simple-endpoint style-scope yt-formatted-string' /&gt;" Guid="7014929b-91fe-446a-86bb-cadf498e6458" InformativeScreenshot="20c212a137e1febce9b513509ae86457.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='graph theory - YouTube' /&gt;" SearchSteps="FuzzySelector, CV" Version="V2" Visibility="Interactive" />
                               </uix:NGetText.Target>
                             </uix:NGetText>
                             <uix:NGetUrl CurrentUrl="[url1]" DisplayName="Get URL" sap:VirtualizedContainerService.HintSize="387.2,87.2" sap2010:WorkflowViewState.IdRef="NGetUrl_1" Version="V3" />
@@ -400,7 +407,7 @@
                             </ui:Click>
                             <uix:NGetText DisplayName="Get Text 'Ekeeda'" sap:VirtualizedContainerService.HintSize="387.2,157.6" sap2010:WorkflowViewState.IdRef="NGetText_3" ScopeIdentifier="81bc509e-1a07-43f4-8e24-b2d0049e8587" TextString="[channelName2]" Version="V3">
                               <uix:NGetText.Target>
-                                <uix:TargetAnchorable BrowserURL="https://www.youtube.com/results?search_query=graph+theory" CvTextArea="907, 650, 50, 15" CvType="AnyWordGroup" DesignTimeRectangle="909, 648, 48, 23" DesignTimeScaleFactor="1.25" ElementType="Text" FriendlyName="'Ekeeda'" FullSelectorArgument="&lt;webctrl aaname='Ekeeda' css-selector='body&amp;gt;ytd-app&amp;gt;div&amp;gt;ytd-page-manager&amp;gt;ytd-search&amp;gt;div&amp;gt;ytd-two-column-search-results-renderer&amp;gt;div&amp;gt;ytd-section-list-renderer&amp;gt;div&amp;gt;ytd-item-section-renderer&amp;gt;div&amp;gt;ytd-video-renderer&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;ytd-channel-name&amp;gt;div&amp;gt;div&amp;gt;yt-formatted-string&amp;gt;a' parentid='text' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl type='' parentid='text' tag='A' class='yt-simple-endpoint style-scope yt-formatted-string' /&gt;" Guid="fd1de8d3-1773-4050-ae5e-c49de995d6bc" InformativeScreenshot="3c91760e1051190361ec6197bf48764a.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='graph theory - YouTube' /&gt;" SearchSteps="FuzzySelector, CV" Version="V2" Visibility="Interactive" />
+                                <uix:TargetAnchorable BrowserURL="https://www.youtube.com/results?search_query=graph+theory" CvTextArea="907, 650, 50, 15" CvType="AnyWordGroup" DesignTimeRectangle="909, 648, 48, 23" DesignTimeScaleFactor="1.25" ElementType="Text" FullSelectorArgument="&lt;webctrl aaname='Ekeeda' css-selector='body&amp;gt;ytd-app&amp;gt;div&amp;gt;ytd-page-manager&amp;gt;ytd-search&amp;gt;div&amp;gt;ytd-two-column-search-results-renderer&amp;gt;div&amp;gt;ytd-section-list-renderer&amp;gt;div&amp;gt;ytd-item-section-renderer&amp;gt;div&amp;gt;ytd-video-renderer&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;ytd-channel-name&amp;gt;div&amp;gt;div&amp;gt;yt-formatted-string&amp;gt;a' parentid='text' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl type='' parentid='text' tag='A' class='yt-simple-endpoint style-scope yt-formatted-string' /&gt;" Guid="fd1de8d3-1773-4050-ae5e-c49de995d6bc" InformativeScreenshot="3c91760e1051190361ec6197bf48764a.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='graph theory - YouTube' /&gt;" SearchSteps="FuzzySelector, CV" Version="V2" Visibility="Interactive" />
                               </uix:NGetText.Target>
                             </uix:NGetText>
                             <uix:NGetUrl CurrentUrl="[url2]" DisplayName="Get URL" sap:VirtualizedContainerService.HintSize="387.2,87.2" sap2010:WorkflowViewState.IdRef="NGetUrl_3" Version="V3" />
@@ -450,7 +457,7 @@
                       <OutArgument x:TypeArguments="x:String">[email]</OutArgument>
                     </ui:InputDialog.Result>
                   </ui:InputDialog>
-                  <ui:SendMail Bcc="{x:Null}" Cc="{x:Null}" ContinueOnError="{x:Null}" From="{x:Null}" MailMessage="{x:Null}" Name="{x:Null}" ReplyTo="{x:Null}" SecurePassword="{x:Null}" TimeoutMS="{x:Null}" UseOAuth="{x:Null}" Body="[mailBody]" DisplayName="Send SMTP Mail Message" Email="ithihaasdr@gmail.com" EnableSSL="True" sap:VirtualizedContainerService.HintSize="387.2,148.8" sap2010:WorkflowViewState.IdRef="SendMail_1" IgnoreCRL="False" IsBodyHtml="False" Password="gfsqumvgpiguplex" Port="587" Result="[status]" SecureConnection="Auto" Server="smtp.gmail.com" Subject="Sample Mail" To="[email]">
+                  <ui:SendMail Bcc="{x:Null}" Cc="{x:Null}" ContinueOnError="{x:Null}" From="{x:Null}" MailMessage="{x:Null}" Name="{x:Null}" ReplyTo="{x:Null}" SecurePassword="{x:Null}" TimeoutMS="{x:Null}" UseOAuth="{x:Null}" Body="[mailBody]" DisplayName="Send SMTP Mail Message" Email="ithihaasdr@gmail.com" EnableSSL="True" sap:VirtualizedContainerService.HintSize="387.2,148.8" sap2010:WorkflowViewState.IdRef="SendMail_1" IgnoreCRL="False" IsBodyHtml="False" Password="skxgkkcpibpvansp" Port="587" Result="[status]" SecureConnection="Auto" Server="smtp.gmail.com" Subject="Sample Mail" To="[email]">
                     <ui:SendMail.Files>
                       <scg:List x:TypeArguments="InArgument(x:String)" Capacity="0" />
                     </ui:SendMail.Files>
@@ -464,73 +471,92 @@
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <av:Point x:Key="ShapeLocation">200,527.2</av:Point>
                       <av:Size x:Key="ShapeSize">200,83.2</av:Size>
+                      <av:PointCollection x:Key="ConnectorLocation">400,568.8000000000001 430,568.8000000000001 430,318.79999999999995 471.99999999999994,318.79999999999995</av:PointCollection>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <Sequence sap:VirtualizedContainerService.HintSize="622.4,1263.2" sap2010:WorkflowViewState.IdRef="Sequence_46">
+                  <Sequence DisplayName="ChatGPT Notes Generator" sap:VirtualizedContainerService.HintSize="536,1453.6" sap2010:WorkflowViewState.IdRef="Sequence_46">
                     <Sequence.Variables>
-                      <Variable x:TypeArguments="uoic:GenerateTextCompletion" Name="chatans" />
+                      <Variable x:TypeArguments="x:String" Name="chatAns" />
                     </Sequence.Variables>
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <ui:ForEach x:TypeArguments="str:Match" CurrentIndex="{x:Null}" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="560,1151.2" sap2010:WorkflowViewState.IdRef="ForEach`1_8" Values="[individual]">
-                      <ui:ForEach.Body>
-                        <ActivityAction x:TypeArguments="str:Match">
-                          <ActivityAction.Argument>
-                            <DelegateInArgument x:TypeArguments="str:Match" Name="currentItem" />
-                          </ActivityAction.Argument>
-                          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="526.4,963.2" sap2010:WorkflowViewState.IdRef="Sequence_49">
-                            <sap:WorkflowViewStateService.ViewState>
-                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                              </scg:Dictionary>
-                            </sap:WorkflowViewStateService.ViewState>
-                            <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Edge: ChatGPT" sap:VirtualizedContainerService.HintSize="483.2,873.6" sap2010:WorkflowViewState.IdRef="NApplicationCard_5" InteractionMode="DebuggerApi" ScopeGuid="2c1acf6b-8bb8-4ea7-bb6c-f93128a4bb4c" Version="V2">
-                              <uix:NApplicationCard.Body>
-                                <ActivityAction x:TypeArguments="x:Object">
-                                  <ActivityAction.Argument>
-                                    <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
-                                  </ActivityAction.Argument>
-                                  <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="449.6,656.8" sap2010:WorkflowViewState.IdRef="Sequence_50">
-                                    <Sequence.Variables>
-                                      <Variable x:TypeArguments="x:String" Name="chatans" />
-                                    </Sequence.Variables>
-                                    <sap:WorkflowViewStateService.ViewState>
-                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                      </scg:Dictionary>
-                                    </sap:WorkflowViewStateService.ViewState>
-                                    <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'TEXTAREA prompt-textarea'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="387.2,218.4" sap2010:WorkflowViewState.IdRef="NTypeInto_2" ScopeIdentifier="2c1acf6b-8bb8-4ea7-bb6c-f93128a4bb4c" Text="what is 3+1" Version="V3">
-                                      <uix:NTypeInto.Target>
-                                        <uix:TargetAnchorable BrowserURL="https://chat.openai.com/" CvTextArea="641, 951, 178, 22" CvTextArgument="Message ChatGPT..." CvType="Text" DesignTimeRectangle="623, 928, 958, 65" DesignTimeScaleFactor="1.25" ElementType="InputBox" FriendlyName="'TEXTAREA prompt-textarea'" FullSelectorArgument="&lt;webctrl id='prompt-textarea' tag='TEXTAREA' /&gt;" FuzzySelectorArgument="&lt;webctrl id='prompt-textarea' tag='TEXTAREA' type='' class='m-0 w-full resize-none border-0 bg-transparent py-[10px] pr-10 focus:ring-0 focus-visible:ring-0 dark:bg-transparent md:py-3.5 md:pr-12 placeholder-black/50 dark:placeholder-white/50 pl-3 md:pl-4' aaname='' /&gt;" Guid="f668a8db-746b-421b-84a7-4d6e1e54d42c" InformativeScreenshot="5c19c5da340feec25ae2ae156e4a2474.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='ChatGPT' /&gt;" SearchSteps="FuzzySelector, CV" Version="V2" Visibility="Interactive" />
-                                      </uix:NTypeInto.Target>
-                                    </uix:NTypeInto>
-                                    <uix:NGetText DisplayName="Get Text 'ChatGPT'" sap:VirtualizedContainerService.HintSize="387.2,157.6" sap2010:WorkflowViewState.IdRef="NGetText_4" ScopeIdentifier="2c1acf6b-8bb8-4ea7-bb6c-f93128a4bb4c" TextString="[chatans]" Version="V3">
-                                      <uix:NGetText.Target>
-                                        <uix:TargetAnchorable BrowserURL="https://chat.openai.com/c/d90b3665-39d9-41e8-a87e-e3c76c76ec4b" CvTextArea="694, 397, 130, 18" CvType="AnyWordGroup" DesignTimeRectangle="697, 390, 766, 35" DesignTimeScaleFactor="1.25" ElementType="Text" FriendlyName="'The sum of 1 + 1 is 2.'" FullSelectorArgument="&lt;webctrl tag='P' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='P' type='' class='' /&gt;" Guid="ae0bd94f-46bd-4e8f-b662-00bd341cdc5e" InformativeScreenshot="d82c4aaf010fe3929b13f05f03780773.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='ChatGPT' /&gt;" SearchSteps="FuzzySelector, CV" Version="V2" Visibility="Interactive">
-                                          <uix:TargetAnchorable.Anchors>
-                                            <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
-                                              <uix:Target CvTextArea="694, 366, 87, 18" CvTextArgument="ChatGPT" CvType="Text" DesignTimeRectangle="697, 360, 766, 30" ElementType="Text" FriendlyName="'ChatGPT'" FullSelectorArgument="&lt;webctrl aaname='ChatGPT' parentid='__next' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='ChatGPT' parentid='__next' tag='DIV' type='' class='font-semibold select-none' check:innerText='ChatGPT' /&gt;" SearchSteps="FuzzySelector, CV" />
-                                            </scg:List>
-                                          </uix:TargetAnchorable.Anchors>
-                                        </uix:TargetAnchorable>
-                                      </uix:NGetText.Target>
-                                    </uix:NGetText>
-                                    <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="387.2,85.6" sap2010:WorkflowViewState.IdRef="MessageBox_13" Text="[chatans]" />
-                                  </Sequence>
-                                </ActivityAction>
-                              </uix:NApplicationCard.Body>
-                              <uix:NApplicationCard.TargetApp>
-                                <uix:TargetApp Area="-9, -9, 1938, 1048" BrowserType="Edge" IconBase64="iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAAdQAAAHUB48IHZQAABK5JREFUWEe9V1lTU0kU5s0/4/hL5o/4MA9ThTDO4lJqzdSU5UKNjpoAggOSsMuiiJqwyi7IEoEAYRFkRxK2bGfOd6Avfe9tUEvxVH2V9Hq+22frzvjx7M82ZBZ7zmT5cm+f83mHGTEGfSVi50q8Q4xb2f78H5z6rD8/1eec4sn3GClt8bdGionchS4bgX3lnqBhwcnA7w0oEkKAO/Hl5sknhEyf944QgM2547OO/VpNCbWND9P6Vowg8WSCwovzVPQ6QFmG+Z9AMrPEe5q/3pNjGHQhr7mBdhNxSqXTNLX8gTomQtQ3HabNnW0hM/x+mi5XF9GftT66UFFo3MOJLJ/nJo4f3m6coHDreSUlkklaiX6k241VtrHzZfk0sbQgJHSZW1uhh62NtrkucHRksC2ixkENOGZ8/V91fls/iE0eKI/yScA8tf2d1DI2RBvbW9LfMzVG2f482zoNmzgB04Agr+U5Dc1FKM0bYVPVf7mqiDon3lGazbHHxOrfdstJ6GvRfh0OCYlXoX7bmA4jgfOl+fRmekIWw+aQwrYXMobfnfiekOqZGqcrT4qtdTcaKmStagOjC7OUSCXpSvXhPB1GAt2To6K0PTxC/q5m+X8vUCdjg3wisG9OY7U1//rTMlY0J/NWY5tUcEAWuPuqVvoretusPh0uArArpDcyLm1sBtEJqM0uVD4S0yAcg+/e0uOOIIdoVOaPL76XE/mlNE/a8A+lQ4eLACbiyC5V/SdtE4GqvnYhsbW3K2OtY8OiCOO/su0bBnuFFMzXwb4CaR499CEdLgKza8s0u7pstU0EsPnix3XyND2j+4F6WthYs9pq3bWax+xHYfEVSFl3izWmw0Vgfn2VIiuLVttEAN6tvhjI9ueKKSAjnJD+ri+1rY9zDoHfmMLRRaB/ZlJiHkeJNjIgpJjTLdq6D+iAs0Y4Q+o+oSKisrdd9ijpDLrWuQgUcPaCIKGgDdawKeId0YHEcxSB0Pys/M/n/AEpbHspbRDZZn9ButbXAC4CADZKplLi1apPt2kXE9HjHeaAWRSBf148EQLq1AAQh5+otoKRABQrGZmfsdn0zssacVLUBeT6XDbR0uaGmO04AtMrS+Jfqq1gJBAIDcgGKiRxGrDpHwdVLoudTs2J7e6wh7dSKXv5UQQQ0tgDdUHpUDASgDIIyioKEOoBBAWnvKdVYhqO1jQ6aJVe3QecBFA3IP9yVlQ6FIwEfJ1NsgDOpPoeBJ/SB453SMhhFihEmDkJwFlVQeo2fD1gJHCRU+xeIiF1Hset+hERuuKrXIj6IvuOuc0FShUs+AUE1RKCOXre0GEkACDdQlDxfit/aBtDjng22CMkkW7xlSp1A8qEA5xTcHL6WieOvZAgx0NgeyipG+iS3+ju/jUMFxUUHH0NrmSICFPMm4ATOPZKhlDDHTCVTolSJTOrS667H65rCE+kXiexo5CBF4tpwAkkHlwqfi8vkMsoBNUQeQJejjQMi+/E4+wDh0XpU8jAc4n/fPFrCBEC5TAHYhzJqJnDEo5pmn8U9h8m/FwyDX4PHD7N+LlkmnDSEAKKBJ5L3Jl0TjpJWAQU8FzCiwWPhs95M3wdvPQ/jkK+9Hd0g/8AAAAASUVORK5CYII=" InformativeScreenshot="b2bea6b608bdd8c6f1c1ab4fcd74e73e.jpg" Selector="&lt;html app='msedge.exe' title='ChatGPT' /&gt;" Title="ChatGPT" Url="https://chat.openai.com/" />
-                              </uix:NApplicationCard.TargetApp>
-                            </uix:NApplicationCard>
-                          </Sequence>
-                        </ActivityAction>
-                      </ui:ForEach.Body>
-                    </ui:ForEach>
+                    <Sequence DisplayName="youtube link generator" sap:VirtualizedContainerService.HintSize="473.6,1341.6" sap2010:WorkflowViewState.IdRef="Sequence_51">
+                      <Sequence.Variables>
+                        <Variable x:TypeArguments="x:String" Name="outputFolder" />
+                      </Sequence.Variables>
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <ui:WriteTextFile File="{x:Null}" DisplayName="Write Text File" FileName="[courseName(0).Value.Replace(&quot; &quot;,&quot;_&quot;).Replace(vbLf,&quot;&quot;).Replace(vbCr, &quot;&quot;)+&quot;unit-&quot;+unit.ToString+&quot; _Revision_Notes.txt&quot;]" sap:VirtualizedContainerService.HintSize="411.2,134.4" sap2010:WorkflowViewState.IdRef="WriteTextFile_2" Text="[courseName(0).Value + vbLf+&quot;UNIT -&quot; +unit.ToString + vbLf+vbLf]" />
+                      <ui:ForEach x:TypeArguments="str:Match" CurrentIndex="{x:Null}" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="411.2,1055.2" sap2010:WorkflowViewState.IdRef="ForEach`1_9" Values="[individual]">
+                        <ui:ForEach.Body>
+                          <ActivityAction x:TypeArguments="str:Match">
+                            <ActivityAction.Argument>
+                              <DelegateInArgument x:TypeArguments="str:Match" Name="currentItem" />
+                            </ActivityAction.Argument>
+                            <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="377.6,867.2" sap2010:WorkflowViewState.IdRef="Sequence_53">
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                              <c:ChatGPT_Activities DisplayName="ChatGPT" sap:VirtualizedContainerService.HintSize="334.4,298.4" sap2010:WorkflowViewState.IdRef="ChatGPT_Activities_3" in_GptModel="gpt-3.5-turbo" in_OpenAiApiKey="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" in_SystemPrompt="You are a helpful assistant. You answer my questions step by step, just to make sure that everything is right." in_UserPrompt="[&quot;Give me a short revision notes for the topic -&quot; + currentItem.ToString.Replace(vbLf, &quot;&quot;).Replace(vbCr, &quot;&quot;) + &quot; &quot; + courseName(0).Value.Replace(vbLf,&quot;&quot;).Replace(vbCr,&quot;&quot;)]" out_AssistantAnswer="[chatAns]" />
+                              <ui:AppendLine File="{x:Null}" DisplayName="Append Line" FileName="[courseName(0).Value.Replace(&quot; &quot;,&quot;_&quot;).Replace(vbLf,&quot;&quot;).Replace(vbCr, &quot;&quot;)+&quot;unit-&quot;+unit.ToString+&quot; _Revision_Notes.txt&quot;]" sap:VirtualizedContainerService.HintSize="334.4,134.4" sap2010:WorkflowViewState.IdRef="AppendLine_4" Text="[&quot;----------------------------------------------------------------------------------&quot; + vbLf]" UseDefaultEncoding="False" />
+                              <ui:AppendLine File="{x:Null}" DisplayName="Append Line" FileName="[courseName(0).Value.Replace(&quot; &quot;,&quot;_&quot;).Replace(vbLf,&quot;&quot;).Replace(vbCr, &quot;&quot;)+&quot;unit-&quot;+unit.ToString+&quot; _Revision_Notes.txt&quot;]" sap:VirtualizedContainerService.HintSize="334.4,134.4" sap2010:WorkflowViewState.IdRef="AppendLine_5" Text="[chatAns]" UseDefaultEncoding="False" />
+                              <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="334.4,90.4" sap2010:WorkflowViewState.IdRef="WriteLine_1" Text="Generated a Revision Note" />
+                            </Sequence>
+                          </ActivityAction>
+                        </ui:ForEach.Body>
+                      </ui:ForEach>
+                    </Sequence>
                   </Sequence>
+                  <FlowStep.Next>
+                    <FlowStep x:Name="__ReferenceID3">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <av:Point x:Key="ShapeLocation">471.99999999999994,277.19999999999993</av:Point>
+                          <av:Size x:Key="ShapeSize">200,83.2</av:Size>
+                          <av:PointCollection x:Key="ConnectorLocation">572,360.3999999999999 572,410.4</av:PointCollection>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <Sequence DisplayName="send email" sap:VirtualizedContainerService.HintSize="200,83.2" sap2010:WorkflowViewState.IdRef="Sequence_55">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <Sequence sap:VirtualizedContainerService.HintSize="449.6,788.8" sap2010:WorkflowViewState.IdRef="Sequence_54">
+                          <Sequence.Variables>
+                            <Variable x:TypeArguments="x:String" Name="status" />
+                            <Variable x:TypeArguments="x:String" Name="email" />
+                          </Sequence.Variables>
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <ui:ReadTextFile File="{x:Null}" Content="[mailBody]" DisplayName="Read Text File" FileName="[courseName(0).Value.Replace(&quot; &quot;,&quot;_&quot;).Replace(vbLf,&quot;&quot;).Replace(vbCr, &quot;&quot;)+&quot;unit-&quot;+unit.ToString+&quot; _Revision_Notes.txt&quot;]" sap:VirtualizedContainerService.HintSize="387.2,80.8" sap2010:WorkflowViewState.IdRef="ReadTextFile_2" />
+                          <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="387.2,85.6" sap2010:WorkflowViewState.IdRef="MessageBox_16" Text="[mailBody]" />
+                          <ui:InputDialog Options="{x:Null}" OptionsString="{x:Null}" DisplayName="Input Dialog" sap:VirtualizedContainerService.HintSize="387.2,241.6" sap2010:WorkflowViewState.IdRef="InputDialog_3" IsPassword="False" Label="Enter gmail of the reciever" Title="Reciever Mail Id">
+                            <ui:InputDialog.Result>
+                              <OutArgument x:TypeArguments="x:String">[email]</OutArgument>
+                            </ui:InputDialog.Result>
+                          </ui:InputDialog>
+                          <ui:SendMail Bcc="{x:Null}" Cc="{x:Null}" ContinueOnError="{x:Null}" From="{x:Null}" MailMessage="{x:Null}" Name="{x:Null}" ReplyTo="{x:Null}" SecurePassword="{x:Null}" TimeoutMS="{x:Null}" UseOAuth="{x:Null}" Body="[mailBody]" DisplayName="Send SMTP Mail Message" Email="ithihaasdr@gmail.com" EnableSSL="True" sap:VirtualizedContainerService.HintSize="387.2,148.8" sap2010:WorkflowViewState.IdRef="SendMail_2" IgnoreCRL="False" IsBodyHtml="False" Password="skxgkkcpibpvansp" Port="587" Result="[status]" SecureConnection="Auto" Server="smtp.gmail.com" Subject="Sample Mail" To="[email]">
+                            <ui:SendMail.Files>
+                              <scg:List x:TypeArguments="InArgument(x:String)" Capacity="0" />
+                            </ui:SendMail.Files>
+                          </ui:SendMail>
+                        </Sequence>
+                      </Sequence>
+                    </FlowStep>
+                  </FlowStep.Next>
                 </FlowStep>
               </FlowStep.Next>
             </FlowStep>
@@ -541,5 +567,6 @@
     <x:Reference>__ReferenceID0</x:Reference>
     <x:Reference>__ReferenceID1</x:Reference>
     <x:Reference>__ReferenceID2</x:Reference>
+    <x:Reference>__ReferenceID3</x:Reference>
   </Flowchart>
 </Activity>

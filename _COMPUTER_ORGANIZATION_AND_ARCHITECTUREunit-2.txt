@@ -1,0 +1,36 @@
+ COMPUTER ORGANIZATION AND ARCHITECTURE
+
+
+UNIT -2
+
+
+----------------------------------------------------------------------------------
+
+Input/Output Organization:  Accessing I/O Devices
+
+Engineering Drive      https://www.youtube.com/watch?v=Fc3IOPg3oZ4
+Sudhakar Atchala   https://www.youtube.com/watch?v=GsL4jeKqerk
+----------------------------------------------------------------------------------
+
+ Interrupts-Interrupt Hardware
+
+Engineering Drive      https://www.youtube.com/watch?v=xd0nwatWpGI
+Tutorialspoint   https://www.youtube.com/watch?v=UnLww6bH6C4
+----------------------------------------------------------------------------------
+
+ Enablingand Disabling Interrupts
+
+Engineering Drive      https://www.youtube.com/watch?v=xd0nwatWpGI
+5 Minutes Engineering   https://www.youtube.com/watch?v=HvS6SneA56g
+----------------------------------------------------------------------------------
+
+ Handling Multiple Devices
+
+Ranjit Vnv      https://www.youtube.com/watch?v=TXRWm6rYdkU
+kiran baby   https://www.youtube.com/watch?v=pT3lTUFxUrI
+----------------------------------------------------------------------------------
+
+ Controlling Device Requests
+
+Ranjit Vnv      https://www.youtube.com/watch?v=yNdGbV6kfRk
+Education 4u   https://www.youtube.com/watch?v=vEXX5DJT7vk
